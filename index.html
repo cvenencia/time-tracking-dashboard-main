@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Time tracking dashboard</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="info-card rounded-border span-2-rows">
+      <div class="info-overlap rounded-border">
+        <img id="img" src="" alt="Profile picture">
+        <div>
+          <p>Report for</p>
+          <h2><span id="name"></span></h2>
+        </div>
+      </div>
+      <div class="time-selector">
+        <input type="radio" name="time-period" value="daily" id="rd-daily" onclick="updateTimePeriod();" checked>
+        <h3><label for="rd-daily">Daily</label></h3>
+    
+        <input type="radio" name="time-period" value="weekly" id="rd-weekly" onclick="updateTimePeriod();">
+        <h3><label for="rd-weekly">Weekly</label></h3>
+    
+        <input type="radio" name="time-period" value="monthly" id="rd-monthly" onclick="updateTimePeriod();">
+        <h3><label for="rd-monthly">Monthly</label></h3>
+      </div>
+    </div>
+  </div>
+  
+  
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://github.com/cvenencia">Carlos Venencia</a>.
+    </div>
+  </footer>
+
+  <script src="index.js"></script>
+</body>
+</html>
