@@ -129,7 +129,6 @@ function getPeriod(period) {
 }
 
 function checkDeviceWidth() {
-  console.log(infoCard);
   if (window.innerWidth < 500) {
     infoCard.classList.remove('span-2-rows');
   } else {
