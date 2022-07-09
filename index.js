@@ -29,7 +29,6 @@ function load(url) {
 
 function getData(d) {
   data = d;
-  console.log(d);
   loadData();
 }
 
