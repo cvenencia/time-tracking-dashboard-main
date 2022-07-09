@@ -72,6 +72,34 @@ input,
   transition: background-color 50ms ease;
 }
 
+.btn-change {
+  display: block;
+  margin: 1em auto;
+  font-size: 1.25rem;
+  box-sizing: content-box;
+  background-color: var(--clr-content-bg-hover);
+  color: white;
+}
+
+.btn-change:hover {
+  cursor: pointer;
+  animation: btn-animation infinite 1s;
+}
+
+@keyframes btn-animation {
+  0% {
+    background-color: var(--clr-content-bg-hover);
+  }
+
+  50% {
+    background-color: var(--clr-time-text);
+  }
+
+  100% {
+    background-color: var(--clr-content-bg-hover);
+  }
+}
+
 .attribution {
   text-align: center;
 }
@@ -104,6 +132,9 @@ footer a {
   border-radius: 50%;
   border: 0.125em solid white;
   max-width: 5em;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  object-position: center;
 }
 
 .info-overlap > div {
@@ -147,6 +178,7 @@ input:checked + h3 > label {
 .bg-img > img {
   position: absolute;
   max-height: 5em;
+  max-width: 5em;
   opacity: 20%;
   top: -0.25em;
   right: 1em;

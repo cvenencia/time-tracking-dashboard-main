@@ -5,6 +5,9 @@ const infoCard = document.querySelector('div.info-card');
 let timePeriod = document.querySelector(
   'input[name="time-period"]:checked'
 ).value;
+
+let loadedDataset = 0;
+const datasets = ['./data1.json', './data2.json'];
 let data;
 const cardColors = [
   'hsl(15, 100%, 70%)',
@@ -14,21 +17,24 @@ const cardColors = [
   'hsl(264, 64%, 52%)',
   'hsl(43, 84%, 65%)',
 ];
-load();
+
+load(datasets[loadedDataset]);
 checkDeviceWidth();
 
-function load() {
-  fetch('./data.json')
+function load(url) {
+  fetch(url)
     .then((res) => res.json())
     .then(getData);
 }
 
 function getData(d) {
   data = d;
+  console.log(d);
   loadData();
 }
 
 function loadData() {
+  deleteCards();
   const { name, img_url, time_data } = data;
   profileImg.src = img_url;
   nameSpan.innerHTML = name;
@@ -111,10 +117,20 @@ function getProperties(title) {
       alt = 'Self care icon';
       break;
     default:
-      iconURL = './images/icon-ellipsis.svg';
+      iconURL =
+        'https://cdn.iconscout.com/icon/free/png-256/activity-2456671-2036125.png';
       alt = 'Activity icon';
   }
   return { color, iconURL, alt };
+}
+
+function changeDataset() {
+  loadedDataset = (loadedDataset + 1) % datasets.length;
+  load(datasets[loadedDataset]);
+}
+
+function deleteCards() {
+  document.querySelectorAll('.bg-img').forEach((e) => e.remove());
 }
 
 function getPeriod(period) {
