@@ -9,6 +9,7 @@ This is a solution to the [Time tracking dashboard challenge on Frontend Mentor]
   - [Screenshot](#screenshot)
 - [My process](#my-process)
   - [Built with](#built-with)
+  - [Links](#links)
 
 ## Overview
 
@@ -32,3 +33,7 @@ Users should be able to:
 - Semantic HTML5 markup
 - CSS Grid
 - Javascript
+
+### Links
+
+- Live Site URL: [Github Pages](https://cvenencia.github.io/time-tracking-dashboard-main/)
